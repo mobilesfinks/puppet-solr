@@ -24,7 +24,7 @@ class solr::params {
   # to module's last update time
   # You may need to change this: use the "install_source" parameter
   # of the solr class
-  $install_source = 'http://www.apache.org/dist/lucene/solr/3.4.0/apache-solr-3.4.0.tgz'
+  $install_source = 'http://apache-mirror.rbc.ru/pub/apache/lucene/solr/6.1.0/solr-6.1.0.tgz'
 
   $install_destination = $::operatingsystem ? {
     default                   => '/opt/solr',
