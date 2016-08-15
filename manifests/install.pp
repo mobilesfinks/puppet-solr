@@ -42,6 +42,14 @@ class solr::install inherits solr {
       }
     }
 
+    user { "$solr::user":
+      comment => 'Solr system user',
+      home    => $solr::install_destination,
+      ensure  => present,
+      #shell  => '/bin/bash',
+      #uid    => '501',
+      #gid    => '20'
+    }
   }
 
 }

@@ -148,6 +148,8 @@ class solr (
   $data_dir            = params_lookup( 'data_dir' ),
   $log_dir             = params_lookup( 'log_dir' ),
   $log_file            = params_lookup( 'log_file' ),
+  $user                = params_lookup( 'user' ),
+  $group               = params_lookup( 'group' ),
   ) inherits solr::params {
 
   validate_bool($source_dir_purge, $absent , $monitor , $puppi , $debug)

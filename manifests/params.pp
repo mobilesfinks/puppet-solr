@@ -49,6 +49,9 @@ class solr::params {
   $monitor_tool        = ''
   $puppi               = false
   $debug               = false
+  
+  user                 = 'solr'
+  group                = 'solr'
 
   $package = $::operatingsystem ? {
     /(?i:Ubuntu|Debian|Mint)/ => 'solr-tomcat',
