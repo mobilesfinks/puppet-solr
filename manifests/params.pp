@@ -50,8 +50,8 @@ class solr::params {
   $puppi               = false
   $debug               = false
   
-  user                 = 'solr'
-  group                = 'solr'
+  $user                 = 'solr'
+  $group                = 'solr'
 
   $package = $::operatingsystem ? {
     /(?i:Ubuntu|Debian|Mint)/ => 'solr-tomcat',
