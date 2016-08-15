@@ -25,6 +25,7 @@ class solr::install inherits solr {
       puppi::netinstall { 'netinstall_solr':
         url                 => $solr::install_source,
         destination_dir     => $solr::install_destination,
+        extracted_dir       => $solr::install_destination,
         preextract_command  => $solr::install_precommand,
         postextract_command => $solr::install_postcommand,
       }
@@ -53,5 +54,5 @@ user { 'solr':
       #uid    => '501',
       #gid    => '20'
     }
-    
+
 }
