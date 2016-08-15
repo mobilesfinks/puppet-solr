@@ -42,7 +42,9 @@ class solr::install inherits solr {
       }
     }
 
-    user { 'solr':
+  }
+
+user { 'solr':
       name => $solr::user,
       comment => 'Solr system user',
       home    => $solr::install_destination,
@@ -51,6 +53,5 @@ class solr::install inherits solr {
       #uid    => '501',
       #gid    => '20'
     }
-  }
-
+    
 }
